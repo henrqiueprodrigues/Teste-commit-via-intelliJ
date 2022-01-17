@@ -7,12 +7,15 @@ public class Gato {
     private String cor;
     private Integer idade;
 
+//----------------- CONSTRUTOR----------------------------
     public Gato(String nome, String cor, Integer idade) {
         this.nome = nome;
         this.cor = cor;
         this.idade = idade;
     }
 
+
+//-------------------- GETTER / SETTERS --------------------
     public String getNome() {
         return nome;
     }
@@ -29,6 +32,16 @@ public class Gato {
         this.cor = cor;
     }
 
+    public Integer getIdade() {
+        return idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+
+//--------------- EQUALS / HASCH CODE-------------------------------
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -42,14 +55,8 @@ public class Gato {
         return Objects.hash(nome, cor, idade);
     }
 
-    public Integer getIdade() {
-        return idade;
-    }
 
-    public void setIdade(Integer idade) {
-        this.idade = idade;
-    }
-
+//------------------- TOSTRING -----------------------
     @Override
     public String toString() {
         return "Gato{" +
